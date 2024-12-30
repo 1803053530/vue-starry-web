@@ -40,10 +40,11 @@ node app.js
 ```sh
 git clone https://github.com/1803053530/vue-starry-web.git
 cd vue-starry-web
-<= 此处已经包含所需的依赖，无需额外进行npm install =>
+npm install
 npm run dev
 <= 记住当前路径位置，并另外打开一个终端 =>
 cd {项目根目录路径}
+npm install
 node app.js
 <=大功告成!!!=>
 ```
