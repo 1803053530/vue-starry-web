@@ -1,0 +1,824 @@
+{
+  "footer": [
+    {
+      "name": "关于平台",
+      "items": [
+        "公司介绍",
+        "隐私政策",
+        "用户协议"
+      ]
+    },
+    {
+      "name": "声明",
+      "items": [
+        "免责声明",
+        "版权声明",
+        "风险提示"
+      ]
+    },
+    {
+      "name": "关注我们",
+      "items": [
+        "微信公众号",
+        "微信小程序",
+        "微博"
+      ]
+    },
+    {
+      "name": "下载App",
+      "items": [
+        "App Store",
+        "Android"
+      ]
+    }
+  ],
+  "header": {
+    "logo": {
+      "url": "/src/img/logo.jpg",
+      "alt": "得物 Logo"
+    },
+    "navItems": [
+      {
+        "id": 1,
+        "title": "首页",
+        "link": "/",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "title": "社区精选",
+        "link": "/community"
+      },
+      {
+        "id": 3,
+        "title": "商家入驻",
+        "link": "/business"
+      },
+      {
+        "id": 4,
+        "title": "创作者服务",
+        "link": "/creator"
+      },
+      {
+        "id": 5,
+        "title": "机构服务",
+        "link": "/institution"
+      },
+      {
+        "id": 6,
+        "title": "关于得物",
+        "link": "/about"
+      },
+      {
+        "id": 7,
+        "title": "加入得物",
+        "link": "/join"
+      }
+    ],
+    "searchPlaceholder": "搜索商品",
+    "downloadButton": {
+      "text": "下载得物App",
+      "link": "/download"
+    }
+  },
+  "body": {
+    "featured": [
+      {
+        "id": 1,
+        "name": "Kiehl's Calendula Herbal Extract Toner",
+        "price": 269,
+        "image": "/src/assets/productImg/accessories/001.jpg"
+      },
+      {
+        "id": 2,
+        "name": "New Balance NB 530 Sneakers",
+        "price": 424,
+        "image": "/src/assets/productImg/accessories/002.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Kiehl's Rare Earth Deep Pore Cleansing Masque",
+        "price": 151,
+        "image": "/src/assets/productImg/accessories/003.jpg"
+      },
+      {
+        "id": 4,
+        "name": "CPB Radiant Fluid Foundation",
+        "price": 249,
+        "image": "/src/assets/productImg/accessories/004.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Clarins Double Serum",
+        "price": 409,
+        "image": "/src/assets/productImg/accessories/005.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Givenchy Prism Libre Loose Powder",
+        "price": 277,
+        "image": "/src/assets/productImg/accessories/006.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Kiehl's Calendula Herbal Extract Toner",
+        "price": 269,
+        "image": "/src/assets/productImg/accessories/007.jpg"
+      },
+      {
+        "id": 8,
+        "name": "New Balance NB 530 Sneakers",
+        "price": 424,
+        "image": "/src/assets/productImg/accessories/008.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Kiehl's Rare Earth Deep Pore Cleansing Masque",
+        "price": 151,
+        "image": "/src/assets/productImg/accessories/009.jpg"
+      },
+      {
+        "id": 10,
+        "name": "CPB Radiant Fluid Foundation",
+        "price": 249,
+        "image": "/src/assets/productImg/accessories/010.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Clarins Double Serum",
+        "price": 409,
+        "image": "/src/assets/productImg/accessories/011.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Givenchy Prism Libre Loose Powder",
+        "price": 277,
+        "image": "/src/assets/productImg/accessories/012.jpg"
+      }
+    ],
+    "shoes": [
+      {
+        "id": 1,
+        "name": "QfXj鞋",
+        "price": 100,
+        "link": "/dxfqir",
+        "image": "/src/assets/productImg/shoes/001.jpg"
+      },
+      {
+        "id": 2,
+        "name": "KbWn鞋",
+        "price": 120,
+        "link": "/gubnwa",
+        "image": "/src/assets/productImg/shoes/002.jpg"
+      },
+      {
+        "id": 3,
+        "name": "IjYm鞋",
+        "price": 90,
+        "link": "/xijymf",
+        "image": "/src/assets/productImg/shoes/003.jpg"
+      },
+      {
+        "id": 4,
+        "name": "HnZg鞋",
+        "price": 110,
+        "link": "/hnzgdi",
+        "image": "/src/assets/productImg/shoes/004.jpg"
+      },
+      {
+        "id": 5,
+        "name": "VmPe鞋",
+        "price": 80,
+        "link": "/vmpego",
+        "image": "/src/assets/productImg/shoes/005.jpg"
+      },
+      {
+        "id": 6,
+        "name": "BkRl鞋",
+        "price": 130,
+        "link": "/bkrltm",
+        "image": "/src/assets/productImg/shoes/006.jpg"
+      },
+      {
+        "id": 7,
+        "name": "GnTq鞋",
+        "price": 95,
+        "link": "/gntqxf",
+        "image": "/src/assets/productImg/shoes/007.jpg"
+      },
+      {
+        "id": 8,
+        "name": "ClUs鞋",
+        "price": 105,
+        "link": "/clusrb",
+        "image": "/src/assets/productImg/shoes/008.jpg"
+      },
+      {
+        "id": 9,
+        "name": "YmFj鞋",
+        "price": 115,
+        "link": "/ymfjlu",
+        "image": "/src/assets/productImg/shoes/009.jpg"
+      },
+      {
+        "id": 10,
+        "name": "RkHl鞋",
+        "price": 125,
+        "link": "/rkhlcp",
+        "image": "/src/assets/productImg/shoes/010.jpg"
+      },
+      {
+        "id": 11,
+        "name": "ZgVm鞋",
+        "price": 85,
+        "link": "/zgvmxe",
+        "image": "/src/assets/productImg/shoes/011.jpg"
+      },
+      {
+        "id": 12,
+        "name": "PeBk鞋",
+        "price": 135,
+        "link": "/pebkyf",
+        "image": "/src/assets/productImg/shoes/012.jpg"
+      },
+      {
+        "id": 13,
+        "name": "TlGn鞋",
+        "price": 75,
+        "link": "/tlgnsj",
+        "image": "/src/assets/productImg/shoes/013.jpg"
+      },
+      {
+        "id": 14,
+        "name": "UsCl鞋",
+        "price": 98,
+        "link": "/usclrk",
+        "image": "/src/assets/productImg/shoes/014.jpg"
+      },
+      {
+        "id": 15,
+        "name": "FjYm鞋",
+        "price": 108,
+        "link": "/fjymtb",
+        "image": "/src/assets/productImg/shoes/015.jpg"
+      },
+      {
+        "id": 16,
+        "name": "HlRk鞋",
+        "price": 118,
+        "link": "/hlrkte",
+        "image": "/src/assets/productImg/shoes/016.jpg"
+      }
+    ],
+    "clothing": [
+      {
+        "id": 1,
+        "name": "QfXj服",
+        "price": 50,
+        "link": "/dxfqir",
+        "image": "/src/assets/productImg/clothing/001.jpg"
+      },
+      {
+        "id": 2,
+        "name": "KbWn服",
+        "price": 60,
+        "link": "/gubnwa",
+        "image": "/src/assets/productImg/clothing/002.jpg"
+      },
+      {
+        "id": 3,
+        "name": "IjYm服",
+        "price": 45,
+        "link": "/xijymf",
+        "image": "/src/assets/productImg/clothing/003.jpg"
+      },
+      {
+        "id": 4,
+        "name": "HnZg服",
+        "price": 55,
+        "link": "/hnzgdi",
+        "image": "/src/assets/productImg/clothing/004.jpg"
+      },
+      {
+        "id": 5,
+        "name": "VmPe服",
+        "price": 40,
+        "link": "/vmpego",
+        "image": "/src/assets/productImg/clothing/005.jpg"
+      },
+      {
+        "id": 6,
+        "name": "BkRl服",
+        "price": 65,
+        "link": "/bkrltm",
+        "image": "/src/assets/productImg/clothing/006.jpg"
+      },
+      {
+        "id": 7,
+        "name": "GnTq服",
+        "price": 52,
+        "link": "/gntqxf",
+        "image": "/src/assets/productImg/clothing/007.jpg"
+      },
+      {
+        "id": 8,
+        "name": "ClUs服",
+        "price": 58,
+        "link": "/clusrb",
+        "image": "/src/assets/productImg/clothing/008.jpg"
+      },
+      {
+        "id": 9,
+        "name": "YmFj服",
+        "price": 62,
+        "link": "/ymfjlu",
+        "image": "/src/assets/productImg/clothing/009.jpg"
+      },
+      {
+        "id": 10,
+        "name": "RkHl服",
+        "price": 68,
+        "link": "/rkhlcp",
+        "image": "/src/assets/productImg/clothing/010.jpg"
+      },
+      {
+        "id": 11,
+        "name": "ZgVm服",
+        "price": 42,
+        "link": "/zgvmxe",
+        "image": "/src/assets/productImg/clothing/011.jpg"
+      },
+      {
+        "id": 12,
+        "name": "PeBk服",
+        "price": 67,
+        "link": "/pebkyf",
+        "image": "/src/assets/productImg/clothing/012.jpg"
+      },
+      {
+        "id": 13,
+        "name": "TlGn服",
+        "price": 38,
+        "link": "/tlgnsj",
+        "image": "/src/assets/productImg/clothing/013.jpg"
+      },
+      {
+        "id": 14,
+        "name": "UsCl服",
+        "price": 53,
+        "link": "/usclrk",
+        "image": "/src/assets/productImg/clothing/014.jpg"
+      },
+      {
+        "id": 15,
+        "name": "FjYm服",
+        "price": 59,
+        "link": "/fjymtb",
+        "image": "/src/assets/productImg/clothing/015.jpg"
+      },
+      {
+        "id": 16,
+        "name": "HlRk服",
+        "price": 63,
+        "link": "/hlrkte",
+        "image": "/src/assets/productImg/clothing/016.jpg"
+      }
+    ],
+    "digital": [
+      {
+        "id": 1,
+        "name": "QfXj数码",
+        "price": 300,
+        "link": "/dxfqir",
+        "image": "/src/assets/productImg/digital/001.jpg"
+      },
+      {
+        "id": 2,
+        "name": "KbWn数码",
+        "price": 320,
+        "link": "/gubnwa",
+        "image": "/src/assets/productImg/digital/002.jpg"
+      },
+      {
+        "id": 3,
+        "name": "IjYm数码",
+        "price": 280,
+        "link": "/xijymf",
+        "image": "/src/assets/productImg/digital/003.jpg"
+      },
+      {
+        "id": 4,
+        "name": "HnZg数码",
+        "price": 310,
+        "link": "/hnzgdi",
+        "image": "/src/assets/productImg/digital/004.jpg"
+      },
+      {
+        "id": 5,
+        "name": "VmPe数码",
+        "price": 270,
+        "link": "/vmpego",
+        "image": "/src/assets/productImg/digital/005.jpg"
+      },
+      {
+        "id": 6,
+        "name": "BkRl数码",
+        "price": 330,
+        "link": "/bkrltm",
+        "image": "/src/assets/productImg/digital/006.jpg"
+      },
+      {
+        "id": 7,
+        "name": "GnTq数码",
+        "price": 290,
+        "link": "/gntqxf",
+        "image": "/src/assets/productImg/digital/007.jpg"
+      },
+      {
+        "id": 8,
+        "name": "ClUs数码",
+        "price": 305,
+        "link": "/clusrb",
+        "image": "/src/assets/productImg/digital/008.jpg"
+      },
+      {
+        "id": 9,
+        "name": "YmFj数码",
+        "price": 315,
+        "link": "/ymfjlu",
+        "image": "/src/assets/productImg/digital/009.jpg"
+      },
+      {
+        "id": 10,
+        "name": "RkHl数码",
+        "price": 325,
+        "link": "/rkhlcp",
+        "image": "/src/assets/productImg/digital/010.jpg"
+      },
+      {
+        "id": 11,
+        "name": "ZgVm数码",
+        "price": 265,
+        "link": "/zgvmxe",
+        "image": "/src/assets/productImg/digital/011.jpg"
+      },
+      {
+        "id": 12,
+        "name": "PeBk数码",
+        "price": 335,
+        "link": "/pebkyf",
+        "image": "/src/assets/productImg/digital/012.jpg"
+      },
+      {
+        "id": 13,
+        "name": "TlGn数码",
+        "price": 255,
+        "link": "/tlgnsj",
+        "image": "/src/assets/productImg/digital/013.jpg"
+      },
+      {
+        "id": 14,
+        "name": "UsCl数码",
+        "price": 288,
+        "link": "/usclrk",
+        "image": "/src/assets/productImg/digital/014.jpg"
+      },
+      {
+        "id": 15,
+        "name": "FjYm数码",
+        "price": 298,
+        "link": "/fjymtb",
+        "image": "/src/assets/productImg/digital/015.jpg"
+      },
+      {
+        "id": 16,
+        "name": "HlRk数码",
+        "price": 308,
+        "image": "/src/assets/productImg/digital/016.jpg"
+      },
+      {
+        "id": 17,
+        "name": "MpQi数码",
+        "price": 278,
+        "link": "/mpqifg",
+        "image": "/src/assets/productImg/digital/017.jpg"
+      },
+      {
+        "id": 18,
+        "name": "NtRo数码",
+        "price": 268,
+        "link": "/ntrosj",
+        "image": "/src/assets/productImg/digital/018.jpg"
+      },
+      {
+        "id": 19,
+        "name": "PrSt数码",
+        "price": 258,
+        "link": "/prstuv",
+        "image": "/src/assets/productImg/digital/019.jpg"
+      },
+      {
+        "id": 20,
+        "name": "QvTu数码",
+        "price": 248,
+        "link": "/qvtuwz",
+        "image": "/src/assets/productImg/digital/020.jpg"
+      }
+    ],
+    "makeup": [
+      {
+        "id": 1,
+        "name": "Nike Air Max 90",
+        "price": 800,
+        "link": "/nike-air-max-90-link",
+        "image": "/src/assets/productImg/makeup/001.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Adidas Ultraboost 21",
+        "price": 900,
+        "link": "/adidas-ultraboost-21-link",
+        "image": "/src/assets/productImg/makeup/002.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Puma Clyde All-Pro",
+        "price": 750,
+        "link": "/puma-clyde-all-pro-link",
+        "image": "/src/assets/productImg/makeup/003.jpg"
+      },
+      {
+        "id": 4,
+        "name": "New Balance 990v5",
+        "price": 750,
+        "link": "/new-balance-990v5-link",
+        "image": "/src/assets/productImg/makeup/004.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Vans Old Skool",
+        "link": "/vans-old-skool-link",
+        "image": "/src/assets/productImg/makeup/005.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Converse Chuck Taylor All Star",
+        "link": "/converse-chuck-taylor-all-star-link",
+        "image": "/src/assets/productImg/makeup/006.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Asics Gel-Kayano 28",
+        "link": "/asics-gel-kayano-28-link",
+        "image": "/src/assets/productImg/makeup/007.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Reebok Classic Leather",
+        "link": "/reebok-classic-leather-link",
+        "image": "/src/assets/productImg/makeup/008.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Salomon XT-6",
+        "link": "/salomon-xt-6-link",
+        "image": "/src/assets/productImg/makeup/009.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Hoka One One Clifton 8",
+        "link": "/hoka-one-one-clifton-8-link",
+        "image": "/src/assets/productImg/makeup/010.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Mizuno Wave Rider 25",
+        "link": "/mizuno-wave-rider-25-link",
+        "image": "/src/assets/productImg/makeup/011.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Brooks Ghost 14",
+        "link": "/brooks-ghost-14-link",
+        "image": "/src/assets/productImg/makeup/012.jpg"
+      },
+      {
+        "id": 13,
+        "name": "On Cloudrunner",
+        "link": "/on-cloudrunner-link",
+        "image": "/src/assets/productImg/makeup/013.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Under Armour Curry 8",
+        "link": "/under-armour-curry-8-link",
+        "image": "/src/assets/productImg/makeup/014.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Lululemon Blissfeel",
+        "link": "/lululemon-blissfeel-link",
+        "image": "/src/assets/productImg/makeup/015.jpg"
+      },
+      {
+        "id": 16,
+        "name": "Patagonia Fitz Roy",
+        "link": "/patagonia-fitz-roy-link",
+        "image": "/src/assets/productImg/makeup/016.jpg"
+      },
+      {
+        "id": 17,
+        "name": "The North Face Summit Series",
+        "link": "/the-north-face-summit-series-link",
+        "image": "/src/assets/productImg/makeup/017.jpg"
+      },
+      {
+        "id": 18,
+        "name": "Arc'teryx Alpha SV",
+        "link": "/arcteryx-alpha-sv-link",
+        "image": "/src/assets/productImg/makeup/018.jpg"
+      }
+    ]
+  },
+  "carousel": {
+    "carouselItems": [
+      {
+        "id": 1,
+        "title": "超多限版",
+        "description": "一键成片",
+        "imageUrl": "/src/img/carouselImg/1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "海量潮品",
+        "description": "尖货首发",
+        "imageUrl": "/src/img/carouselImg/2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "AR科技",
+        "description": "不止试鞋",
+        "imageUrl": "/src/img/carouselImg/3.jpg"
+      },
+      {
+        "id": 4,
+        "title": "得物榜单",
+        "description": "精心推荐",
+        "imageUrl": "/src/img/carouselImg/4.png"
+      },
+      {
+        "id": 5,
+        "title": "万种品牌",
+        "description": "任意挑选",
+        "imageUrl": "/src/img/carouselImg/5.jpg"
+      },
+      {
+        "id": 6,
+        "title": "个性定制",
+        "description": "专享服务",
+        "imageUrl": "/src/img/carouselImg/6.jpg"
+      }
+    ],
+    "qrCodeUrl": "/src/img/qrCode.png"
+  },
+  "category": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "精选",
+        "engTitle": "featured",
+        "link": "/featured",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "鞋类",
+        "engTitle": "shoes",
+        "link": "/shoes"
+      },
+      {
+        "id": 3,
+        "name": "潮服",
+        "engTitle": "clothing",
+        "link": "/clothing"
+      },
+      {
+        "id": 4,
+        "name": "数码",
+        "engTitle": "digital",
+        "link": "/digital"
+      },
+      {
+        "id": 5,
+        "name": "美妆",
+        "engTitle": "makeup",
+        "link": "/makeup"
+      },
+      {
+        "id": 6,
+        "name": "家居",
+        "engTitle": "home",
+        "link": "/home"
+      },
+      {
+        "id": 7,
+        "name": "手表",
+        "engTitle": "watches",
+        "link": "/watches"
+      },
+      {
+        "id": 8,
+        "name": "包袋",
+        "engTitle": "bags",
+        "link": "/bags"
+      },
+      {
+        "id": 9,
+        "name": "配饰",
+        "engTitle": "accessories",
+        "link": "/accessories"
+      },
+      {
+        "id": 10,
+        "name": "潮玩",
+        "engTitle": "trendy",
+        "link": "/trendy"
+      },
+      {
+        "id": 11,
+        "name": "女装",
+        "engTitle": "women",
+        "link": "/women"
+      }
+    ]
+  },
+  "Community": {
+    "communityInfo": {
+      "hot": [
+        {
+          "imageUrl": "/src/assets/productImg/accessories/030.jpg",
+          "title": "街拍精选",
+          "description": "2024春季最新街拍look",
+          "views": "2.3k",
+          "likes": "456"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/031.jpg",
+          "title": "THE TAKEOVER",
+          "description": "Black Eyed Peas 新专辑发布",
+          "views": "5.1k",
+          "likes": "892"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/032.jpg",
+          "title": "球鞋上新",
+          "description": "限量版球鞋现已发售",
+          "views": "3.7k",
+          "likes": "644"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/033.jpg",
+          "title": "手办精选",
+          "description": "新款动漫手办展示",
+          "views": "1.8k",
+          "likes": "325"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/034.jpg",
+          "title": "DIOR新品",
+          "description": "奢侈品限量系列",
+          "views": "4.2k",
+          "likes": "767"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/035.jpg",
+          "title": "时尚穿搭",
+          "description": "冬季时尚穿搭指南",
+          "views": "3.1k",
+          "likes": "589"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/036.jpg",
+          "title": "美妆好物",
+          "description": "热门美妆产品推荐",
+          "views": "2.8k",
+          "likes": "620"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/037.jpg",
+          "title": "数码潮品",
+          "description": "最新电子产品来袭",
+          "views": "3.5k",
+          "likes": "705"
+        },
+        {
+          "imageUrl": "/src/assets/productImg/accessories/038.jpg",
+          "title": "旅游胜地",
+          "description": "梦幻旅游地推荐",
+          "views": "4.0k",
+          "likes": "800"
+        }
+      ]
+    }
+  }
+}
