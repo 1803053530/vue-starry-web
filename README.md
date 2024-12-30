@@ -43,7 +43,7 @@ cd vue-starry-web
 npm install
 npm run dev
 <= 记住当前路径位置，并另外打开一个终端 =>
-cd {项目根目录路径}
+cd {项目根目录路径}/backend
 npm install
 node app.js
 <=大功告成!!!=>
