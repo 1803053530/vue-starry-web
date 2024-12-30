@@ -38,7 +38,7 @@ node app.js
 ### Setup Our Project(小白同志看这里！！！)
 
 ```sh
-git clone https://github.com/1803053530/vue-starry-web.git
+git clone https://github.com/1803053530/vue-starry-web.git -b master
 cd vue-starry-web
 npm install
 npm run dev
