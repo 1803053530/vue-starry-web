@@ -21,7 +21,7 @@ getData({t:2}).then(res=>{
       </div>
     </div>
     <div class="container mx-auto mt-8 text-center text-sm">
-      <p>&copy; 2016-2024 深圳信息得到有限公司</p>
+      <p>&copy; 2016-2024 深圳信息星语有限公司</p>
       <p class="mt-2">深ICP备20241223236号-p</p>
     </div>
   </footer>

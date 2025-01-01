@@ -27,7 +27,7 @@ onBeforeRouteUpdate(async (to, from) => {
   <main class="container mx-auto py-8">
     <el-row :gutter="20">
       <el-col :span="4" v-for="product in products" :key="product.id">
-        <RouterLink :to="'/productDetail/'+'digital/'+product.name+'/'+product.price">
+        <RouterLink :to="'/productDetail/'+'digital/'+product.name+'/'+product.price+'/'+product.id">
           <el-card :body-style="{ padding: '0px' }">
             <img :src="product.image" class="w-full h-40 object-cover"/>
             <div class="p-4">

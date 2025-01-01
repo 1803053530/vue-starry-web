@@ -2,7 +2,7 @@
   <div class="hero-section">
     <!-- Left Content -->
     <div class="hero-content">
-      <h1 class="hero-title">得到运动×潮流×好物</h1>
+      <h1 class="hero-title">星语运动×潮流×好物</h1>
       <p class="hero-subtitle">正品保障·退件查验·多重鉴别</p>
 
       <!-- QR Code -->
@@ -13,11 +13,11 @@
         <div class="download-buttons">
           <el-button class="download-btn" type="primary">
             <el-icon><Apple /></el-icon>
-            App Store 内搜索"得到"下载
+            App Store 内搜索"星语"下载
           </el-button>
           <el-button class="download-btn" type="primary">
             <el-icon></el-icon>
-            安卓应用市场内搜索"得到"下载
+            安卓应用市场内搜索"星语"下载
           </el-button>
         </div>
       </div>

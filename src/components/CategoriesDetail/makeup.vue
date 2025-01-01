@@ -27,7 +27,7 @@ onBeforeRouteUpdate(async (to, from) => {
     <el-row :gutter="20">
       <el-col :span="4" v-for="product in products" :key="product.id">
         <el-card :body-style="{ padding: '0px' }">
-          <RouterLink :to="'/productDetail/'+'makeup/'+product.name+'/'+product.price">
+          <RouterLink :to="'/productDetail/'+'makeup/'+product.name+'/'+product.price+'/'+product.id">
           <img :src="product.image" class="w-full h-40 object-cover"/>
           <div class="p-4">
             <h3 class="text-lg font-semibold mb-2">{{ product.name }}</h3>

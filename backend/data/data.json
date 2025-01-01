@@ -87,73 +87,73 @@
         "id": 1,
         "name": "Kiehl's Calendula Herbal Extract Toner",
         "price": 269,
-        "image": "/src/assets/productImg/accessories/001.jpg"
+        "image": "/src/assets/productImg/featured/001.jpg"
       },
       {
         "id": 2,
         "name": "New Balance NB 530 Sneakers",
         "price": 424,
-        "image": "/src/assets/productImg/accessories/002.jpg"
+        "image": "/src/assets/productImg/featured/002.jpg"
       },
       {
         "id": 3,
         "name": "Kiehl's Rare Earth Deep Pore Cleansing Masque",
         "price": 151,
-        "image": "/src/assets/productImg/accessories/003.jpg"
+        "image": "/src/assets/productImg/featured/003.jpg"
       },
       {
         "id": 4,
         "name": "CPB Radiant Fluid Foundation",
         "price": 249,
-        "image": "/src/assets/productImg/accessories/004.jpg"
+        "image": "/src/assets/productImg/featured/004.jpg"
       },
       {
         "id": 5,
         "name": "Clarins Double Serum",
         "price": 409,
-        "image": "/src/assets/productImg/accessories/005.jpg"
+        "image": "/src/assets/productImg/featured/005.jpg"
       },
       {
         "id": 6,
         "name": "Givenchy Prism Libre Loose Powder",
         "price": 277,
-        "image": "/src/assets/productImg/accessories/006.jpg"
+        "image": "/src/assets/productImg/featured/006.jpg"
       },
       {
         "id": 7,
         "name": "Kiehl's Calendula Herbal Extract Toner",
         "price": 269,
-        "image": "/src/assets/productImg/accessories/007.jpg"
+        "image": "/src/assets/productImg/featured/007.jpg"
       },
       {
         "id": 8,
         "name": "New Balance NB 530 Sneakers",
         "price": 424,
-        "image": "/src/assets/productImg/accessories/008.jpg"
+        "image": "/src/assets/productImg/featured/008.jpg"
       },
       {
         "id": 9,
         "name": "Kiehl's Rare Earth Deep Pore Cleansing Masque",
         "price": 151,
-        "image": "/src/assets/productImg/accessories/009.jpg"
+        "image": "/src/assets/productImg/featured/009.jpg"
       },
       {
         "id": 10,
         "name": "CPB Radiant Fluid Foundation",
         "price": 249,
-        "image": "/src/assets/productImg/accessories/010.jpg"
+        "image": "/src/assets/productImg/featured/010.jpg"
       },
       {
         "id": 11,
         "name": "Clarins Double Serum",
         "price": 409,
-        "image": "/src/assets/productImg/accessories/011.jpg"
+        "image": "/src/assets/productImg/featured/011.jpg"
       },
       {
         "id": 12,
         "name": "Givenchy Prism Libre Loose Powder",
         "price": 277,
-        "image": "/src/assets/productImg/accessories/012.jpg"
+        "image": "/src/assets/productImg/featured/012.jpg"
       }
     ],
     "shoes": [
@@ -763,63 +763,63 @@
     "communityInfo": {
       "hot": [
         {
-          "imageUrl": "/src/assets/productImg/accessories/030.jpg",
+          "imageUrl": "/src/assets/productImg/featured/030.jpg",
           "title": "街拍精选",
           "description": "2024春季最新街拍look",
           "views": "2.3k",
           "likes": "456"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/031.jpg",
+          "imageUrl": "/src/assets/productImg/featured/031.jpg",
           "title": "THE TAKEOVER",
           "description": "Black Eyed Peas 新专辑发布",
           "views": "5.1k",
           "likes": "892"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/032.jpg",
+          "imageUrl": "/src/assets/productImg/featured/032.jpg",
           "title": "球鞋上新",
           "description": "限量版球鞋现已发售",
           "views": "3.7k",
           "likes": "644"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/033.jpg",
+          "imageUrl": "/src/assets/productImg/featured/033.jpg",
           "title": "手办精选",
           "description": "新款动漫手办展示",
           "views": "1.8k",
           "likes": "325"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/034.jpg",
+          "imageUrl": "/src/assets/productImg/featured/034.jpg",
           "title": "DIOR新品",
           "description": "奢侈品限量系列",
           "views": "4.2k",
           "likes": "767"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/035.jpg",
+          "imageUrl": "/src/assets/productImg/featured/035.jpg",
           "title": "时尚穿搭",
           "description": "冬季时尚穿搭指南",
           "views": "3.1k",
           "likes": "589"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/036.jpg",
+          "imageUrl": "/src/assets/productImg/featured/036.jpg",
           "title": "美妆好物",
           "description": "热门美妆产品推荐",
           "views": "2.8k",
           "likes": "620"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/037.jpg",
+          "imageUrl": "/src/assets/productImg/featured/037.jpg",
           "title": "数码潮品",
           "description": "最新电子产品来袭",
           "views": "3.5k",
           "likes": "705"
         },
         {
-          "imageUrl": "/src/assets/productImg/accessories/038.jpg",
+          "imageUrl": "/src/assets/productImg/featured/038.jpg",
           "title": "旅游胜地",
           "description": "梦幻旅游地推荐",
           "views": "4.0k",

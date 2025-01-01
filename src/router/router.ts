@@ -82,7 +82,7 @@ const router = createRouter({
                     children: [
                         {
                             // 使用动态路由参数，以更灵活地匹配不同产品详情
-                            path: ':productCategory/:productName/:productPrice',
+                            path: ':productCategory/:productName/:productPrice/:productId',
                             name: 'ProductDetailPage',
                             component: () => import('@/components/ProductDetail/detail.vue'),
                             // 可以在这里添加一些额外的路由元信息（例如页面标题等，根据需求来定）

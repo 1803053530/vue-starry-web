@@ -35,13 +35,13 @@ const activeCategory = ref('1')
 
 onMounted(async () => {
   await fetchCategoryData()
-  activeCategory.value = localStorage.getItem('curCId') || '1'
+  activeCategory.value = sessionStorage.getItem('curCID') || '1'
 })
 
 
 const handleCategoryClick = (category: CategoryItem) => {
   activeCategory.value = category.id.toString()
-  localStorage.setItem('curCId', category.id.toString())
+  sessionStorage.setItem('curCID', category.id.toString())
   console.log(category.engTitle)
   // route.push({ name: 'CategoryProducts', params: { cId: category.engTitle } });
 }
