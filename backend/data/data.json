@@ -564,84 +564,98 @@
       {
         "id": 5,
         "name": "Vans Old Skool",
+        "price": 249,
         "link": "/vans-old-skool-link",
         "image": "/src/assets/productImg/makeup/005.jpg"
       },
       {
         "id": 6,
         "name": "Converse Chuck Taylor All Star",
+        "price": 249,
         "link": "/converse-chuck-taylor-all-star-link",
         "image": "/src/assets/productImg/makeup/006.jpg"
       },
       {
         "id": 7,
         "name": "Asics Gel-Kayano 28",
+        "price": 249,
         "link": "/asics-gel-kayano-28-link",
         "image": "/src/assets/productImg/makeup/007.jpg"
       },
       {
         "id": 8,
         "name": "Reebok Classic Leather",
+        "price": 249,
         "link": "/reebok-classic-leather-link",
         "image": "/src/assets/productImg/makeup/008.jpg"
       },
       {
         "id": 9,
         "name": "Salomon XT-6",
+        "price": 249,
         "link": "/salomon-xt-6-link",
         "image": "/src/assets/productImg/makeup/009.jpg"
       },
       {
         "id": 10,
         "name": "Hoka One One Clifton 8",
+        "price": 249,
         "link": "/hoka-one-one-clifton-8-link",
         "image": "/src/assets/productImg/makeup/010.jpg"
       },
       {
         "id": 11,
         "name": "Mizuno Wave Rider 25",
+        "price": 249,
         "link": "/mizuno-wave-rider-25-link",
         "image": "/src/assets/productImg/makeup/011.jpg"
       },
       {
         "id": 12,
         "name": "Brooks Ghost 14",
+        "price": 249,
         "link": "/brooks-ghost-14-link",
         "image": "/src/assets/productImg/makeup/012.jpg"
       },
       {
         "id": 13,
         "name": "On Cloudrunner",
+        "price": 249,
         "link": "/on-cloudrunner-link",
         "image": "/src/assets/productImg/makeup/013.jpg"
       },
       {
         "id": 14,
         "name": "Under Armour Curry 8",
+        "price": 249,
         "link": "/under-armour-curry-8-link",
         "image": "/src/assets/productImg/makeup/014.jpg"
       },
       {
         "id": 15,
         "name": "Lululemon Blissfeel",
+        "price": 249,
         "link": "/lululemon-blissfeel-link",
         "image": "/src/assets/productImg/makeup/015.jpg"
       },
       {
         "id": 16,
         "name": "Patagonia Fitz Roy",
+        "price": 249,
         "link": "/patagonia-fitz-roy-link",
         "image": "/src/assets/productImg/makeup/016.jpg"
       },
       {
         "id": 17,
         "name": "The North Face Summit Series",
+        "price": 249,
         "link": "/the-north-face-summit-series-link",
         "image": "/src/assets/productImg/makeup/017.jpg"
       },
       {
         "id": 18,
         "name": "Arc'teryx Alpha SV",
+        "price": 249,
         "link": "/arcteryx-alpha-sv-link",
         "image": "/src/assets/productImg/makeup/018.jpg"
       }
@@ -827,5 +841,109 @@
         }
       ]
     }
+  },
+  "Details": {
+    "product": {
+      "title": "科颜氏 金盏花 植萃爽肤水 收缩毛孔清洁舒缓祛痘保湿抗氧化修护控油",
+      "price": 75,
+      "image": "/product-image.jpg",
+      "sizes": [
+        {
+          "value": "40ml",
+          "label": "40ml",
+          "icon": "/bottle-small.png"
+        },
+        {
+          "value": "75ml",
+          "label": "75ml",
+          "icon": "/bottle-medium.png"
+        },
+        {
+          "value": "125ml",
+          "label": "125ml",
+          "icon": "/bottle-large.png"
+        },
+        {
+          "value": "250ml",
+          "label": "250ml",
+          "icon": "/bottle-xlarge.png"
+        },
+        {
+          "value": "40ml*5",
+          "label": "40ml*5",
+          "icon": "/bottle-pack.png"
+        },
+        {
+          "value": "75ml*4",
+          "label": "75ml*4",
+          "icon": "/bottle-pack-large.png"
+        }
+      ]
+    },
+    "comment": [
+      "很好用，下次还会买",
+      "老客户了哈哈，来他家买过很多次了，质量真的好",
+      "什么叫做物美价廉",
+      "物超所值，会回购！",
+      "商家态度好好~",
+      "质量高，品质好",
+      "Good! Very Good!",
+      "价格很公道，品质也很好",
+      "真的很不错",
+      "帮大家验过毒辣，这个是真的无敌！！大家快买啊",
+      "大家新年快乐啊！！！",
+      "这个真的超级好，超级推荐",
+      "强推！听我的没错~"
+    ],
+    "recentPurchases": [
+      {
+        "id": 1,
+        "username": "露*",
+        "userAvatar": "/src/assets/productImg/avatars/avatar1.jpg",
+        "comment": "",
+        "price": 271,
+        "time": "现在"
+      },
+      {
+        "id": 2,
+        "username": "郑的很**",
+        "userAvatar": "/src/assets/productImg/avatars/avatar2.jpg",
+        "comment": "",
+        "price": 272,
+        "time": "1分钟前"
+      },
+      {
+        "id": 3,
+        "username": "倪*",
+        "userAvatar": "/src/assets/productImg/avatars/avatar3.jpg",
+        "comment": "",
+        "price": 271,
+        "time": "1分钟前"
+      },
+      {
+        "id": 4,
+        "username": "王海*",
+        "userAvatar": "/src/assets/productImg/avatars/avatar4.jpg",
+        "comment": "",
+        "price": 272,
+        "time": "1分钟前"
+      },
+      {
+        "id": 5,
+        "username": "邓*",
+        "userAvatar": "/src/assets/productImg/avatars/avatar5.jpg",
+        "comment": "",
+        "price": 271,
+        "time": "2分钟前"
+      },
+      {
+        "id": 6,
+        "username": "吴红*",
+        "userAvatar": "/src/assets/productImg/avatars/avatar6.jpg",
+        "comment": "",
+        "price": 272,
+        "time": "2分钟前"
+      }
+    ]
   }
 }

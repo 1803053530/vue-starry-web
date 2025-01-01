@@ -139,6 +139,7 @@ const handleSearch = () => {
 const handleNavClick = (item: NavItem) => {
   console.log('Navigating to:', item.link)
   activeIndex.value = item.id.toString()
+  sessionStorage.setItem('curCID', "1")
   // Implement navigation logic here
 }
 

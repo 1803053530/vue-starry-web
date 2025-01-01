@@ -2,13 +2,15 @@
   <div class="product-detail">
     <div class="product-content">
       <div class="product-image-container">
-        <el-image :src="product.image" fit="cover" class="product-image" />
+        <el-image :src="product.image" fit="fill" class="product-image" :preview-src-list="product.image"/>
       </div>
       <div class="product-info">
         <!-- Product Header -->
         <div class="product-header">
           <h1 class="product-title">{{ product.title }}</h1>
-          <el-icon class="expand-icon"><ArrowDown /></el-icon>
+          <el-icon class="expand-icon">
+            <ArrowDown/>
+          </el-icon>
         </div>
 
         <!-- Price Section -->
@@ -36,20 +38,19 @@
             立即购买 ¥{{ product.price }}
           </el-button>
           <el-button :class="['wishlist', { 'is-wishlisted': isWishlisted }]" @click="toggleWishlist">
-            <el-icon><Star /></el-icon>
+            <el-icon>
+              <Star/>
+            </el-icon>
             想要
           </el-button>
         </div>
 
         <!-- QR Code Section -->
+        <div class="qr-section" v-if="route.params.productCategory !== 'makeup'">
+          <el-image src="/src/assets/productImg/ibforeign/newAds.png" style="width: 100%;height: 140px" fit="fill"/>
+        </div>
         <div class="qr-section">
-          <div class="qr-code">
-            <el-image :src="qrCodeUrl"></el-image>
-          </div>
-          <div class="qr-text">
-            <p>得物App或微信扫码看商品</p>
-            <p class="promotion">新人登录领最高 <span class="highlight">¥520</span> 专属礼包</p>
-          </div>
+          <el-image src="/src/assets/productImg/ibforeign/newQRcode.png" style="width: 100%;height: 140px" fit="fill"/>
         </div>
       </div>
     </div>
@@ -62,7 +63,7 @@
           <el-avatar :src="purchase.userAvatar"></el-avatar>
           <div class="purchase-info">
             <span class="username">{{ purchase.username }}</span>
-            <span class="size">{{ purchase.size }}</span>
+            <span class="size">{{ purchase.comment }}</span>
           </div>
           <div class="purchase-price">
             <span>¥{{ purchase.price }}</span>
@@ -96,11 +97,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { ArrowDown, Star } from '@element-plus/icons-vue'
-import { getData } from "@/api/common.ts"
-import { useRoute } from "vue-router"
-import { ElMessage } from 'element-plus'
+import {ref, onMounted} from 'vue'
+import {ArrowDown, Star} from '@element-plus/icons-vue'
+import {getData} from "@/api/common.ts"
+import {useRoute} from "vue-router"
+import {ElMessage} from 'element-plus'
 
 const route = useRoute()
 const selectedSize = ref('75ml')
@@ -110,82 +111,50 @@ const wishlistCount = ref(0)
 const showSuccessMessage = ref(false)
 const imgNo = ref("0")
 
-getData({ t: 3 }).then(res => {
+const product = ref({})
+const comment = ref([])
+const recentPurchases = ref([])
+getData({t: 3}).then(res => {
   qrCodeUrl.value = res.qrCodeUrl
 })
 
-const product = ref({
-  title: '科颜氏 金盏花 植萃爽肤水 收缩毛孔清洁舒缓祛痘保湿抗氧化修护控油',
-  price: 75,
-  image: '/product-image.jpg', // Add the product image URL here
-  sizes: [
-    { value: '40ml', label: '40ml', icon: '/bottle-small.png' },
-    { value: '75ml', label: '75ml', icon: '/bottle-medium.png' },
-    { value: '125ml', label: '125ml', icon: '/bottle-large.png' },
-    { value: '250ml', label: '250ml', icon: '/bottle-xlarge.png' },
-    { value: '40ml*5', label: '40ml*5', icon: '/bottle-pack.png' },
-    { value: '75ml*4', label: '75ml*4', icon: '/bottle-pack-large.png' },
-  ]
-})
 
-const recentPurchases = ref([
-  {
-    id: 1,
-    username: '露*',
-    userAvatar: '/src/assets/productImg/avatars/avatar1.jpg',
-    size: '500ml',
-    price: 271,
-    time: '28分钟前'
-  },
-  {
-    id: 2,
-    username: '郑的很**',
-    userAvatar: '/src/assets/productImg/avatars/avatar2.jpg',
-    size: '300ml',
-    price: 272,
-    time: '48分钟前'
-  },
-  {
-    id: 3,
-    username: '倪*',
-    userAvatar: '/src/assets/productImg/avatars/avatar3.jpg',
-    size: '500ml',
-    price: 271,
-    time: '28分钟前'
-  },
-  {
-    id: 4,
-    username: '王海*',
-    userAvatar: '/src/assets/productImg/avatars/avatar4.jpg',
-    size: '300ml',
-    price: 272,
-    time: '48分钟前'
-  },
-  {
-    id: 5,
-    username: '邓*',
-    userAvatar: '/src/assets/productImg/avatars/avatar5.jpg',
-    size: '500ml',
-    price: 271,
-    time: '28分钟前'
-  },
-  {
-    id: 6,
-    username: '吴红*',
-    userAvatar: '/src/assets/productImg/avatars/avatar6.jpg',
-    size: '300ml',
-    price: 272,
-    time: '48分钟前'
-  },
-  // Add more purchase records as needed
-])
 
-onMounted(() => {
+
+onMounted(async () => {
+  await getData({t:6}).then(res => {
+    product.value = res.product
+    comment.value = res.comment
+    recentPurchases.value = res.recentPurchases
+  })
   product.value.title = route.params.productName
   product.value.price = Number(route.params.productPrice)
   route.params.productId < 10 ? imgNo.value = `00${route.params.productId}` : imgNo.value = `0${route.params.productId}`
   product.value.image = `/src/assets/productImg/${route.params.productCategory}/${imgNo.value}.jpg`
+  simulateRecentPurchases()
 })
+
+const simulateRecentPurchases = () => {
+  const simulatePrices = () => {
+    //实现一个功能 recentPurchases中所有price字段 遵循以下规则：下标0，3的price为route.params.productPrice的2倍，其他的price都是route.params.productPrice
+    recentPurchases.value.forEach((item, index) => {
+      if (index === 0 || index === 3) {
+        item.price = Number(route.params.productPrice) * 2
+      } else {
+        item.price = Number(route.params.productPrice)
+      }
+    })
+  }
+  const simulateComments = () => {
+    //实现一个功能 recentPurchases中所有comment字段 遵循以下规则：comment字段随机从comment数组中取值
+    recentPurchases.value.forEach((item, index) => {
+      item.comment = comment.value[Math.floor(Math.random() * comment.value.length)]
+    })
+  }
+  simulatePrices()
+  simulateComments()
+
+}
 
 const handleBuyNow = () => {
   showSuccessMessage.value = true
@@ -224,7 +193,7 @@ const toggleWishlist = () => {
 
 .product-image {
   width: 100%;
-  height: auto;
+  height: 460px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -313,11 +282,11 @@ const toggleWishlist = () => {
 .qr-section {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px;
-  background-color: #f8f8f8;
+  gap: 8px;
+  //padding: 16px;
+  //background-color: #f8f8f8;
   border-radius: 8px;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .qr-code {

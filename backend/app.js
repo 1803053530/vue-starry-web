@@ -59,6 +59,9 @@ app.post('/getData', async (req, res) => {
         case 5:
             res.json(rawData.Community);
             break
+        case 6:
+            res.json(rawData.Details);
+            break
         default:
             res.status(500).json({error: 'Invalid parameter'});
         //500 代表的是服务器端的问题
