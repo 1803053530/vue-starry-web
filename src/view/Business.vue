@@ -35,30 +35,36 @@
       <el-main>
         <el-row :gutter="20">
           <el-col :span="16">
-            <div class="demo-image__lazy">
-              <el-image v-for="image in banners" style="height: 400px" fit="contain" :key="image.image" :src="image.image" lazy  />
+            <div class="headline-section">
+              <div class="headline-content">
+                <h1 class="headline-title">成为德物商家，开启您的成功之旅</h1>
+                <p class="headline-subtitle">加入我们的平台，享受零成本入驻、专业支持和庞大的客户群</p>
+                <el-button type="primary" size="large" @click="scrollToRegister">立即入驻</el-button>
+              </div>
             </div>
           </el-col>
           <el-col :span="8">
-            <el-card class="register-card">
+            <el-card class="register-card" ref="registerCard">
               <template #header>
                 <div class="card-header">
                   <span>商家入驻</span>
                   <el-tag type="success">0元入驻</el-tag>
                 </div>
               </template>
-              <el-form :model="registerForm" :rules="registerRules" ref="registerFormRef" @submit.prevent="submitRegister">
-                <el-form-item prop="phone">
+              <el-form :model="registerForm" :rules="registerRules" ref="registerFormRef" @submit.prevent="submitRegister" label-position="top">
+                <el-form-item label="手机号码" prop="phone">
                   <el-input v-model="registerForm.phone" placeholder="请输入手机号码">
                     <template #prepend>
                       <el-select v-model="registerForm.countryCode" placeholder="+86">
                         <el-option label="+86" value="+86"></el-option>
+                        <el-option label="+80" value="+80"></el-option>
+                        <el-option label="+21" value="+21"></el-option>
                         <el-option label="+1" value="+1"></el-option>
                       </el-select>
                     </template>
                   </el-input>
                 </el-form-item>
-                <el-form-item prop="code">
+                <el-form-item label="验证码" prop="code">
                   <el-input v-model="registerForm.code" placeholder="请输入验证码">
                     <template #append>
                       <el-button :disabled="!canGetCode" @click="getVerificationCode">
@@ -67,7 +73,7 @@
                     </template>
                   </el-input>
                 </el-form-item>
-                <el-form-item prop="password">
+                <el-form-item label="密码" prop="password">
                   <el-input v-model="registerForm.password" type="password" placeholder="请设置密码" show-password></el-input>
                 </el-form-item>
                 <el-form-item prop="agreement">
@@ -76,7 +82,7 @@
                   </el-checkbox>
                 </el-form-item>
                 <el-form-item>
-                  <el-button type="primary" class="register-button" @click="submitRegister" :loading="registerLoading">
+                  <el-button type="primary" class="register-button" native-type="submit" :loading="registerLoading">
                     立即入驻
                   </el-button>
                 </el-form-item>
@@ -143,9 +149,9 @@
 </template>
 
 <script setup>
-import {ref, reactive, computed, onMounted} from 'vue'
-import {ElMessage} from 'element-plus'
-import {ArrowDown} from '@element-plus/icons-vue'
+import { ref, reactive, computed, onMounted } from 'vue'
+import { ElMessage } from 'element-plus'
+import { ArrowDown } from '@element-plus/icons-vue'
 
 const activeIndex = ref('1')
 const loginDialogVisible = ref(false)
@@ -155,13 +161,15 @@ const agreementContent = ref('')
 const registerLoading = ref(false)
 const loginLoading = ref(false)
 const codeCountdown = ref(0)
+const registerFormRef = ref(null)
+const registerCard = ref(null)
 
 const navItems = [
-  {id: 1, name: '立即入驻', icon: 'House'},
-  {id: 2, name: '热招商家', icon: 'Star', hot: true},
-  {id: 3, name: '招商活动', icon: 'Calendar'},
-  {id: 4, name: '入驻流程', icon: 'Guide'},
-  {id: 5, name: '帮助中心', icon: 'QuestionFilled'},
+  { id: 1, name: '立即入驻', icon: 'House' },
+  { id: 2, name: '热招商家', icon: 'Star', hot: true },
+  { id: 3, name: '招商活动', icon: 'Calendar' },
+  { id: 4, name: '入驻流程', icon: 'Guide' },
+  { id: 5, name: '帮助中心', icon: 'QuestionFilled' },
 ]
 
 const banners = [
@@ -186,10 +194,10 @@ const banners = [
 ]
 
 const hotCategories = [
-  {id: 1, name: '运动鞋服', image: '/src/assets/productImg/watches/004.jpg', tag: '增长200%'},
-  {id: 2, name: '手机数码', image: '/src/assets/productImg/watches/005.jpg', tag: '热销榜首'},
-  {id: 3, name: '美妆个护', image: '/src/assets/productImg/watches/006.jpg', tag: '新锐品类'},
-  {id: 4, name: '潮流服饰', image: '/src/assets/productImg/watches/007.jpg', tag: '年轻人最爱'},
+  { id: 1, name: '运动鞋服', image: '/src/assets/productImg/watches/004.jpg', tag: '增长200%' },
+  { id: 2, name: '手机数码', image: '/src/assets/productImg/watches/005.jpg', tag: '热销榜首' },
+  { id: 3, name: '美妆个护', image: '/src/assets/productImg/watches/006.jpg', tag: '新锐品类' },
+  { id: 4, name: '潮流服饰', image: '/src/assets/productImg/watches/007.jpg', tag: '年轻人最爱' },
 ]
 
 const registerForm = reactive({
@@ -207,28 +215,38 @@ const loginForm = reactive({
 
 const registerRules = {
   phone: [
-    {required: true, message: '请输入手机号码', trigger: 'blur'},
-    {pattern: /^1[3-9]\d{9}$/, message: '请输入正确的手机号码', trigger: 'blur'}
+    { required: true, message: '请输入手机号码', trigger: 'blur' },
+    { pattern: /^1[3-9]\d{9}$/, message: '请输入正确的手机号码', trigger: 'blur' }
   ],
   code: [
-    {required: true, message: '请输入验证码', trigger: 'blur'},
-    {len: 6, message: '验证码长度应为6位', trigger: 'blur'}
+    { required: true, message: '请输入验证码', trigger: 'blur' },
+    { len: 6, message: '验证码长度应为6位', trigger: 'blur' }
   ],
   password: [
-    {required: true, message: '请设置密码', trigger: 'blur'},
-    {min: 8, max: 20, message: '密码长度应在8-20位之间', trigger: 'blur'}
+    { required: true, message: '请设置密码', trigger: 'blur' },
+    { min: 8, max: 20, message: '密码长度应在8-20位之间', trigger: 'blur' },
+    { pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[\s\S]{8,20}$/, message: '密码必须包含大小写字母和数字', trigger: 'blur' }
   ],
   agreement: [
-    {type: 'accepted', message: '请阅读并同意用户协议', trigger: 'change'}
+    {
+      validator: (rule, value, callback) => {
+        if (value === false) {
+          callback(new Error('请阅读并同意用户协议'))
+        } else {
+          callback()
+        }
+      },
+      trigger: 'change'
+    }
   ]
 }
 
 const loginRules = {
   username: [
-    {required: true, message: '请输入用户名/手机号', trigger: 'blur'}
+    { required: true, message: '请输入用户名/手机号', trigger: 'blur' }
   ],
   password: [
-    {required: true, message: '请输入密码', trigger: 'blur'}
+    { required: true, message: '请输入密码', trigger: 'blur' }
   ]
 }
 
@@ -252,32 +270,40 @@ const handleBannerClick = (banner) => {
   ElMessage.info(`点击了banner: ${banner.title}`)
 }
 
-const getVerificationCode = () => {
+const getVerificationCode = async () => {
   if (!canGetCode.value) return
-  // 模拟发送验证码
-  ElMessage.success('验证码已发送，请注意查收')
-  codeCountdown.value = 60
-  const timer = setInterval(() => {
-    codeCountdown.value--
-    if (codeCountdown.value === 0) {
-      clearInterval(timer)
-    }
-  }, 1000)
+  try {
+    await registerFormRef.value.validateField('phone')
+    // 模拟发送验证码
+    ElMessage.success('验证码已发送，请注意查收')
+    codeCountdown.value = 60
+    const timer = setInterval(() => {
+      codeCountdown.value--
+      if (codeCountdown.value <= 0) {
+        clearInterval(timer)
+      }
+    }, 1000)
+  } catch (error) {
+    console.error('Phone validation failed:', error)
+    ElMessage.error('请输入正确的手机号码')
+  }
 }
 
 const submitRegister = async () => {
+  if (!registerFormRef.value) return
+
   registerLoading.value = true
   try {
+    await registerFormRef.value.validate()
+    // 所有验证通过，可以提交表单
     // 模拟注册请求
     await new Promise(resolve => setTimeout(resolve, 2000))
-    ElMessage.success('注册成功！');
+    ElMessage.success('注册成功！')
     // 重置表单
-    registerForm.phone = ''
-    registerForm.code = ''
-    registerForm.password = ''
-    registerForm.agreement = false
+    registerFormRef.value.resetFields()
   } catch (error) {
-    ElMessage.error('注册失败，请重试')
+    console.error('Form validation failed:', error)
+    ElMessage.error('请检查表单填写是否正确')
   } finally {
     registerLoading.value = false
   }
@@ -333,8 +359,12 @@ const showCategoryDetail = (category) => {
   ElMessage.info(`查看类目详情：${category.name}`)
 }
 
+const scrollToRegister = () => {
+  registerCard.value.$el.scrollIntoView({ behavior: 'smooth' })
+}
+
 onMounted(() => {
-  localStorage.setItem('curView','3')
+  localStorage.setItem('curView', '3')
 })
 </script>
 
@@ -421,48 +451,89 @@ onMounted(() => {
   position: relative;
 }
 
+.banner-carousel {
+  margin-bottom: 20px;
+}
+
+.banner-item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.banner-image {
+  height: 100%;
+  width: 100%;
+}
+
 .carousel-caption {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-.el-footer {
-  background-color: #f5f7fa;
-  padding: 20px 0;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-links {
-  display: flex;
-  gap: 20px;
+.carousel-caption h3 {
+  margin-top: 0;
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
-.copyright {
-  color: #909399;
-  font-size: 14px;
+.carousel-caption p {
+  margin-bottom: 15px;
+}
+
+.headline-section {
+  position: relative;
+  height: 500px;
+  background-image: url('/src/assets/productImg/watches/001.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.headline-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.headline-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  color: #ffffff;
+  max-width: 600px;
+  margin-top: 60px;
+}
+
+.headline-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.headline-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 @keyframes ellipsis {
-  0% {
-    content: '.';
-  }
-  33% {
-    content: '..';
-  }
-  66% {
-    content: '...';
-  }
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
 }
 
 .dot::after {
@@ -470,17 +541,23 @@ onMounted(() => {
   animation: ellipsis 1.5s infinite;
 }
 
-.demo-image__lazy {
-  height: 400px;
-  overflow-y: auto;
-}
-.demo-image__lazy .el-image {
-  display: block;
-  min-height: 200px;
-  margin-bottom: 10px;
-}
-.demo-image__lazy .el-image:last-child {
-  margin-bottom: 0;
+@media (max-width: 768px) {
+  .headline-section {
+    height: 400px;
+  }
+
+  .headline-content {
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .headline-title {
+    font-size: 2rem;
+  }
+
+  .headline-subtitle {
+    font-size: 1.2rem;
+  }
 }
 </style>
 
