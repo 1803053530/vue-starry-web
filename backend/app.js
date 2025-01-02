@@ -75,7 +75,7 @@ app.get('/askDoubao', async (req, res) => {
         const messages = [
             {
                 role: "system",
-                content: "你是一个知识助手，帮忙解答各种问题"
+                content: "你是星语购物商城的AI助手，我们的项目名称是星语，你的名字叫语儿，我们平台拥有众多的商品和商家数量优势，声誉享誉全国。"
             },
             {
                 role: "user",

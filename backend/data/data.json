@@ -851,32 +851,32 @@
         {
           "value": "40ml",
           "label": "40ml",
-          "icon": "/bottle-small.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-small.jpg"
         },
         {
           "value": "75ml",
           "label": "75ml",
-          "icon": "/bottle-medium.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-medium.jpg"
         },
         {
           "value": "125ml",
           "label": "125ml",
-          "icon": "/bottle-large.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-large.jpg"
         },
         {
           "value": "250ml",
           "label": "250ml",
-          "icon": "/bottle-xlarge.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-xlarge.jpg"
         },
         {
           "value": "40ml*5",
           "label": "40ml*5",
-          "icon": "/bottle-pack.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-pack.jpg"
         },
         {
           "value": "75ml*4",
           "label": "75ml*4",
-          "icon": "/bottle-pack-large.png"
+          "icon": "/src/assets/productImg/productSizes/bottle-pack-large.jpg"
         }
       ]
     },

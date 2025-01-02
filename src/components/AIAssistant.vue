@@ -25,7 +25,7 @@ export default {
         { role: 'user', content: inputText.value }
       ];
       try {
-        responseText.value = "豆包正在思考中..."
+        responseText.value = "语儿正在思考中..."
         ans.value = await apiAskDoubao({q: messages[0].content})
         responseText.value = ans.value.answer// 此处待开发，waiting for api building 23/Dec/2024
       } catch (error) {
@@ -51,7 +51,7 @@ export default {
     <el-avatar @click="openDialog" size="large" src="/src/img/1.jpg" style="cursor: pointer" alt="AI客服" title="AI客服"></el-avatar>
     <el-dialog
         v-model="isDialogVisible"
-        title="向豆包提问"
+        title="向语儿提问"
         :close-on-click-modal="false"
         :close-on-press-escape="false"
     >
