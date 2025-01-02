@@ -37,7 +37,7 @@
           <el-col :span="16">
             <div class="headline-section">
               <div class="headline-content">
-                <h1 class="headline-title">成为德物商家，开启您的成功之旅</h1>
+                <h1 class="headline-title">成为星语商家，开启您的成功之旅</h1>
                 <p class="headline-subtitle">加入我们的平台，享受零成本入驻、专业支持和庞大的客户群</p>
                 <el-button type="primary" size="large" @click="scrollToRegister">立即入驻</el-button>
               </div>

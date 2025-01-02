@@ -35,7 +35,7 @@
   "header": {
     "logo": {
       "url": "/src/img/logo.jpg",
-      "alt": "得物 Logo"
+      "alt": "星语 Logo"
     },
     "navItems": [
       {
@@ -66,18 +66,18 @@
       },
       {
         "id": 6,
-        "title": "关于得物",
+        "title": "关于星语",
         "link": "/about"
       },
       {
         "id": 7,
-        "title": "加入得物",
+        "title": "加入星语",
         "link": "/join"
       }
     ],
     "searchPlaceholder": "搜索商品",
     "downloadButton": {
-      "text": "下载得物App",
+      "text": "下载星语App",
       "link": "/download"
     }
   },
@@ -683,7 +683,7 @@
       },
       {
         "id": 4,
-        "title": "得物榜单",
+        "title": "星语榜单",
         "description": "精心推荐",
         "imageUrl": "/src/img/carouselImg/4.png"
       },

@@ -42,7 +42,7 @@
         <el-image :src="qrCodeUrl"></el-image>
       </div>
       <div class="qr-text">
-        <p>得物App或微信扫码看商品</p>
+        <p>星语App或微信扫码看商品</p>
         <p class="promotion">新人登录领最高 <span class="highlight">¥520</span> 专属礼包</p>
       </div>
     </div>
