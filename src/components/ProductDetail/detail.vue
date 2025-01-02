@@ -34,7 +34,7 @@
 
         <!-- Action Buttons -->
         <div class="action-buttons">
-          <el-button type="primary" class="buy-now" @click="handleBuyNow">
+          <el-button type="primary" class="buy-now" @click="showQrCode">
             立即购买 ¥{{ product.price }}
           </el-button>
           <el-button :class="['wishlist', { 'is-wishlisted': isWishlisted }]" @click="toggleWishlist">
@@ -94,6 +94,8 @@
       </template>
     </el-dialog>
   </div>
+  <!-- QR Code Modal -->
+  <QrCodeModal v-model:visible="qrCodeVisible" />
 </template>
 
 <script setup>
@@ -110,6 +112,7 @@ const isWishlisted = ref(false)
 const wishlistCount = ref(0)
 const showSuccessMessage = ref(false)
 const imgNo = ref("0")
+import QrCodeModal from './BuyProduct.vue'
 
 const product = ref({})
 const comment = ref([])
@@ -117,6 +120,11 @@ const recentPurchases = ref([])
 getData({t: 3}).then(res => {
   qrCodeUrl.value = res.qrCodeUrl
 })
+const qrCodeVisible = ref(false)
+
+const showQrCode = () => {
+  qrCodeVisible.value = true
+}
 
 
 

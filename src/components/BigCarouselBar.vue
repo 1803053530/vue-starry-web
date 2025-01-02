@@ -11,11 +11,11 @@
           <el-image :src="qrCodeUrl" alt="Download QR Code" class="qr-code" />
         </div>
         <div class="download-buttons">
-          <el-button class="download-btn" type="primary">
+          <el-button class="download-btn" type="primary" @click="showQrCode">
             <el-icon><Apple /></el-icon>
             App Store 内搜索"星语"下载
           </el-button>
-          <el-button class="download-btn" type="primary">
+          <el-button class="download-btn" type="primary" @click="showQrCode">
             <el-icon></el-icon>
             安卓应用市场内搜索"星语"下载
           </el-button>
@@ -43,12 +43,14 @@
       </el-carousel>
     </div>
   </div>
+  <BuyProduct v-model:visible="qrCodeVisible"></BuyProduct>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { Apple} from '@element-plus/icons-vue'
 import {getData} from "@/api/common.ts";
+import BuyProduct from "@/components/ProductDetail/BuyProduct.vue";
 
 // Dynamic carousel data
 const carouselItems = ref([])
@@ -59,6 +61,12 @@ getData({t:3}).then(res => {
   carouselItems.value = res.carouselItems
   qrCodeUrl.value = res.qrCodeUrl
 })
+
+const qrCodeVisible = ref(false)
+
+const showQrCode = () => {
+  qrCodeVisible.value = true
+}
 </script>
 
 <style scoped>
