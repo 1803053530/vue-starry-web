@@ -57,8 +57,22 @@
           {{ headerConfig.downloadButton.text }}
         </el-button>
       </div>
+
+      <!-- Login Button -->
+      <div class="login-button">
+        <el-button
+            type="primary"
+            @click="showLoginDialog"
+        >
+          {{ isLoggedIn ? '欢迎, ' + currentUser.username : '登录' }}
+        </el-button>
+      </div>
     </div>
   </el-header>
+  <LoginRegisterDialog
+      v-model:visible="loginDialogVisible"
+      @login-success="handleLoginSuccess"
+  />
 </template>
 
 <script setup lang="ts">
@@ -70,8 +84,24 @@ import { toRaw } from '@vue/reactivity'
 const searchQuery = ref('')
 const activeIndex = ref('1')
 
+const loginDialogVisible = ref(false)
+const isLoggedIn = ref(false)
+const currentUser = ref(null)
+
+const showLoginDialog = () => {
+  if (!isLoggedIn.value) {
+    loginDialogVisible.value = true
+  }
+}
+
+const handleLoginSuccess = (user) => {
+  isLoggedIn.value = true
+  currentUser.value = user
+}
+
 import type { HeaderConfig } from '@/types/header'
 import {getData} from "@/api/common";
+import LoginRegisterDialog from "@/components/LoginRegisterDialog.vue";
 
 
 // const getNavItems = () => {
@@ -233,6 +263,11 @@ const handleDownload = () => {
 }
 
 .download-button {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.login-button {
   flex-shrink: 0;
   margin-left: 20px;
 }
